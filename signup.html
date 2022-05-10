@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+      
+        #b{
+            height: 550px;
+            width: 90%;
+           
+            margin-left: 50px;
+        }
+        #b>div:nth-child(1){
+            height: 40px;
+            width: 10%;
+          
+            margin: auto;
+            margin-top: 30px;
+        }
+        #b>div:nth-child(1)>img{
+            height: 50px;
+            width: 100%;
+          
+            margin: auto;
+        }
+        #b>div:nth-child(2){
+            height:80%;
+            width: 40%;
+            
+            margin: auto;
+            margin-top: 30px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #b>div:nth-child(2)>div:nth-child(1){
+            height: 20px;
+            width: 25%;
+           
+            margin: auto;
+        }
+        #b>div:nth-child(2)>div:nth-child(2) {
+            height: 180px;
+            width: 70%;
+            
+            margin:20px 40px ;
+            margin-left: 30px;
+        }
+        #b>div:nth-child(2)>div:nth-child(2) >p{
+            margin-bottom: -0.5px;
+            color: grey;
+        }
+        #p1{
+            margin-left: 25px;
+            margin-right: 30px;
+            font-size: 11px;
+            text-align: center;
+            color: grey;
+            margin-top: 0px;
+        }
+#button{
+   width: 370px;
+   height: 40px;
+   margin-left: 30px;
+   color: grey;
+   margin-top: 20px;
+}
+#p2{
+    color: grey;
+    text-align: center;
+    margin-top: 50px;
+}
+h2{
+    color: brown;
+}
+#name{
+    height: 30px;
+}
+#email{
+    height: 30px;
+}
+#pass{
+    height: 30px;
+}
+    </style>
+</head>
+<body>
+   
+    <div id="b">
+       <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdOkirvMYLrFrhXdIpUjr8qXAv9I24cmiIDA&usqp=CAU"/></div>
+       <div>
+            <div><h2>Sign Up</h2></div>
+           <div>
+               <p>Full name</p>
+               <input id="name" type="text" placeholder="Enter your full name" size="50">
+               <p>Email</p>
+               <input id="email" type="email" placeholder="Enter email" size="50">
+               <p>Password</p>
+               <input id="pass" type="text" placeholder="Enter your password" size="50">
+           </div>
+           <p id="p1">By signing up,I accept the Masai School Terms of service and acknowledge the Privacy Policy</p> 
+           <button id="button">SIGN UP</button>
+           <p id="p2">Already have an account?Login</p>
+        </div>
+       
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("#button").addEventListener("click",abc)
+var arr=[];
+function abc()
+{
+    event.preventDefault();
+    var obj={
+        name:document.querySelector("#name").value,
+        email:document.querySelector("#email").value,
+        password:document.querySelector("#pass").value,
+    }
+arr.push(obj);
+console.log(arr);
+localStorage.setItem("detail",JSON.stringify(arr));
+alert("Your Account has created");
+}
+// window.location.href="login.html";
+
+</script>
